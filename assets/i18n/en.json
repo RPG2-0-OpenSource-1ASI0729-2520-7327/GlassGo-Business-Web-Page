@@ -12,7 +12,9 @@
     "tutorials": "Tutorials",
     "contact": "Contact",
     "login": "Log In",
-    "register": "Sign Up"
+    "register": "Sign Up",
+    "team": "Team",
+    "about_team": "About the Team"
   },
   "hero": {
     "title": "Software designed for traceability and<br>loss prevention in glass transportation",
@@ -36,6 +38,35 @@
         "title": "Mission and Vision",
         "description": "We revolutionize glass transportation with accessible, safe and efficient technology, creating a new standard without breakage and with total transparency."
       }
+    }
+  },
+  "team": {
+    "title": "Development Team",
+    "subtitle": "Meet the team building GlassGo with technology, passion, and a customer-first mindset.",
+    "members": {
+      "1": {
+        "name": "Jarod Céspedes",
+        "career": "Software Engineer"
+      },
+      "2": {
+        "name": "Guillermo Howard",
+        "career": "Software Engineer"
+      },
+      "3": {
+        "name": "David Vivar",
+        "career": "Software Engineer"
+      },
+      "4": {
+        "name": "Dylan Guillen",
+        "career": "Software Engineer"
+      }
+    },
+    "about_video": {
+      "title": "About the Team",
+      "subtitle": "Coming soon: a look at how we work, our engineering practices, and our culture.",
+      "badge": "Coming soon",
+      "cta": "Video available soon",
+      "note": "We are preparing the video for our YouTube channel. Check back soon!"
     }
   },
   "benefits": {

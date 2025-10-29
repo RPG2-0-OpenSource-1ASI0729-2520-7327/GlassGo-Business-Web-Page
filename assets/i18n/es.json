@@ -12,7 +12,9 @@
     "tutorials": "Tutoriales",
     "contact": "Contacto",
     "login": "Iniciar sesión",
-    "register": "Registrarse"
+    "register": "Registrarse",
+    "team": "Equipo",
+    "about_team": "Sobre el equipo"
   },
   "hero": {
     "title": "Software diseñado para trazabilidad y<br>prevención de pérdidas en transporte de vidrio",
@@ -36,6 +38,35 @@
         "title": "Misión y visión",
         "description": "Revolucionamos el transporte de vidrio con tecnología accesible, segura y eficiente, creando un nuevo estándar sin roturas y con total transparencia."
       }
+    }
+  },
+  "team": {
+    "title": "Equipo de desarrollo",
+    "subtitle": "Conoce al equipo que construye GlassGo con tecnología, pasión y una mentalidad centrada en el cliente.",
+    "members": {
+      "1": {
+        "name": "Jarod Céspedes",
+        "career": "Ingeniero de Software"
+      },
+      "2": {
+        "name": "Guillermo Howard",
+        "career": "Ingeniero de Software"
+      },
+      "3": {
+        "name": "David Vivar",
+        "career": "Ingeniero de Software"
+      },
+      "4": {
+        "name": "Dylan Guillen",
+        "career": "Ingeniero de Software"
+      }
+    },
+    "about_video": {
+      "title": "Sobre el equipo",
+      "subtitle": "Video proximamente: Un vistazo a cómo trabajamos, nuestras prácticas de ingeniería y nuestra cultura.",
+      "badge": "Próximamente",
+      "cta": "Video disponible pronto",
+      "note": "Estamos preparando el video para nuestro canal de YouTube. ¡Vuelve pronto!"
     }
   },
   "benefits": {
