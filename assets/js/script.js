@@ -790,6 +790,102 @@ const scrollToSection = (sectionId) => {
     }
 };
 
+// Initialize Terms Modal
+const initTermsModal = () => {
+    const modal = document.getElementById('termsModal');
+    const btn = document.getElementById('termsBtn');
+    const closeBtn = document.querySelector('.terms-close');
+    const acceptBtn = document.getElementById('acceptTermsBtn');
+
+    // Open modal
+    btn.addEventListener('click', () => {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    const closeModal = () => {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Handle terms acceptance
+    acceptBtn.addEventListener('click', () => {
+        // Aquí puedes agregar la lógica para guardar la aceptación
+        localStorage.setItem('termsAccepted', 'true');
+        localStorage.setItem('termsAcceptedDate', new Date().toISOString());
+        
+        // Mostrar mensaje de confirmación
+        const confirmationMessage = document.createElement('div');
+        confirmationMessage.className = 'terms-confirmation';
+        confirmationMessage.innerHTML = `
+            <div class="terms-confirmation-content">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#10b981">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                <span>Términos y condiciones aceptados</span>
+            </div>
+        `;
+        document.body.appendChild(confirmationMessage);
+
+        // Cerrar el modal
+        closeModal();
+
+        // Remover el mensaje de confirmación después de 3 segundos
+        setTimeout(() => {
+            confirmationMessage.style.opacity = '0';
+            setTimeout(() => confirmationMessage.remove(), 300);
+        }, 3000);
+    });
+
+    // Close on outside click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    // Add styles for confirmation message
+    const style = document.createElement('style');
+    style.textContent = `
+        .terms-confirmation {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        .terms-confirmation-content {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #10b981;
+            font-weight: 500;
+        }
+    `;
+    document.head.appendChild(style);
+};
+
+// Initialize Terms Modal
+if (document.querySelector('.terms-modal')) {
+    initTermsModal();
+}
+
 // Export functions for global use
 window.GlassGoUtils = {
     scrollToTop,
