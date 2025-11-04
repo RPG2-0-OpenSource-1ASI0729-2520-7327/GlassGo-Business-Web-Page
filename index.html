@@ -9,6 +9,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Initial Terms Modal -->
+    <div id="initialTermsModal" class="terms-modal show">
+        <div class="terms-modal-content">
+            <h2 data-i18n="terms.title">Términos y Condiciones</h2>
+            <div class="terms-modal-body">
+                <section>
+                    <h3 data-i18n="terms.section1.title">1. Aceptación de los Términos</h3>
+                    <p data-i18n="terms.section1.content">Al acceder y utilizar los servicios de GlassGo, usted acepta estos términos y condiciones en su totalidad. Es importante que lea detenidamente este documento antes de utilizar nuestros servicios.</p>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section2.title">2. Descripción del Servicio</h3>
+                    <p data-i18n="terms.section2.content">GlassGo proporciona un software para la gestión y trazabilidad del transporte de vidrio. Nuestros servicios incluyen, pero no se limitan a:</p>
+                    <ul>
+                        <li data-i18n="terms.section2.list.0">Seguimiento en tiempo real de envíos</li>
+                        <li data-i18n="terms.section2.list.1">Monitoreo de impactos y vibraciones</li>
+                        <li data-i18n="terms.section2.list.2">Optimización de rutas</li>
+                        <li data-i18n="terms.section2.list.3">Generación de reportes y análisis</li>
+                        <li data-i18n="terms.section2.list.4">Gestión de flotas y conductores</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section3.title">3. Responsabilidades del Usuario</h3>
+                    <p data-i18n="terms.section3.content">El usuario se compromete a:</p>
+                    <ul>
+                        <li data-i18n="terms.section3.list.0">Proporcionar información precisa y actualizada</li>
+                        <li data-i18n="terms.section3.list.1">Mantener la confidencialidad de sus credenciales</li>
+                        <li data-i18n="terms.section3.list.2">Utilizar el servicio de manera ética y legal</li>
+                        <li data-i18n="terms.section3.list.3">Reportar cualquier uso no autorizado de su cuenta</li>
+                        <li data-i18n="terms.section3.list.4">Cumplir con todas las leyes y regulaciones aplicables</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section4.title">4. Privacidad y Protección de Datos</h3>
+                    <p data-i18n="terms.section4.content">Nos comprometemos a proteger su privacidad y datos personales. Nuestras prácticas incluyen:</p>
+                    <ul>
+                        <li data-i18n="terms.section4.list.0">Encriptación de datos sensibles</li>
+                        <li data-i18n="terms.section4.list.1">Almacenamiento seguro en servidores protegidos</li>
+                        <li data-i18n="terms.section4.list.2">Acceso restringido a personal autorizado</li>
+                        <li data-i18n="terms.section4.list.3">Cumplimiento con regulaciones de protección de datos</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section5.title">5. Limitación de Responsabilidad</h3>
+                    <p data-i18n="terms.section5.content">GlassGo no será responsable por:</p>
+                    <ul>
+                        <li data-i18n="terms.section5.list.0">Pérdidas no atribuibles directamente a nuestro incumplimiento</li>
+                        <li data-i18n="terms.section5.list.1">Daños indirectos o consecuentes</li>
+                        <li data-i18n="terms.section5.list.2">Interrupciones temporales del servicio por mantenimiento</li>
+                        <li data-i18n="terms.section5.list.3">Fuerza mayor o circunstancias fuera de nuestro control</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section6.title">6. Tarifas y Pagos</h3>
+                    <p data-i18n="terms.section6.content">Los detalles sobre precios, facturación y pagos se especifican en nuestros planes de suscripción. Nos reservamos el derecho de modificar las tarifas con previo aviso.</p>
+                </section>
+                <section>
+                    <h3 data-i18n="terms.section7.title">7. Cancelación y Terminación</h3>
+                    <p data-i18n="terms.section7.content">Puede cancelar su suscripción en cualquier momento. Nos reservamos el derecho de suspender o terminar el servicio en caso de violación de estos términos.</p>
+                </section>
+                <section class="terms-legal-notice">
+                    <p data-i18n="terms.legal_notice">La información proporcionada en este documento es solo para fines informativos y no constituye asesoramiento legal. Para cualquier consulta específica, le recomendamos consultar con un profesional legal.</p>
+                </section>
+            </div>
+            <div class="terms-modal-footer">
+                <div class="terms-buttons-container">
+                    <button id="acceptInitialTerms" class="accept-terms-btn" data-i18n="terms.accept_button">
+                        Aceptar Todo
+                    </button>
+                    <button id="declineInitialTerms" class="decline-terms-btn" data-i18n="terms.decline_button">
+                        No Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Navigation -->
     <header class="header">
         <div class="nav-container">

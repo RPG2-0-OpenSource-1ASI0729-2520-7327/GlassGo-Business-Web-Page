@@ -3,6 +3,10 @@
     "title": "GlassGo - Software para transporte de vidrio",
     "language": "es"
   },
+  "notifications": {
+    "terms_accepted": "Términos y condiciones aceptados",
+    "terms_rejected": "Debes aceptar los términos y condiciones para continuar"
+  },
   "navigation": {
     "home": "Inicio",
     "about": "Nosotros",
@@ -262,7 +266,8 @@
       "content": "Puede cancelar su suscripción en cualquier momento. Nos reservamos el derecho de suspender o terminar el servicio en caso de violación de estos términos."
     },
     "legal_notice": "La información proporcionada en este documento es solo para fines informativos y no constituye asesoramiento legal. Para cualquier consulta específica, le recomendamos consultar con un profesional legal.",
-    "accept_button": "Aceptar Términos y Condiciones"
+    "accept_button": "Aceptar Todo",
+    "decline_button": "No Aceptar"
   },
   "language": {
     "current": "Español",

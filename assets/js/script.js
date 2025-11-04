@@ -1,6 +1,67 @@
 // Navigation and Page Functionality for GlassGo
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Manejar el modal inicial de términos y condiciones
+    const initialModal = document.getElementById('initialTermsModal');
+    
+    // Mostrar el modal solo si los términos no han sido aceptados
+    if (!localStorage.getItem('termsAccepted')) {
+        initialModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Manejar la aceptación de términos inicial
+    document.getElementById('acceptInitialTerms').addEventListener('click', function() {
+        localStorage.setItem('termsAccepted', 'true');
+        localStorage.setItem('termsAcceptedDate', new Date().toISOString());
+        initialModal.classList.remove('show');
+        document.body.style.overflow = '';
+        
+        // Mostrar mensaje de confirmación
+        const confirmationMessage = document.createElement('div');
+        confirmationMessage.className = 'terms-confirmation';
+        confirmationMessage.innerHTML = `
+            <div class="terms-confirmation-content">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#10b981">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.41 7.41L7 13l1.41 1.41L12 10.83l3.59 3.58L17 13l-5-5z"/>
+                </svg>
+                <span data-i18n="notifications.terms_accepted">Términos y condiciones aceptados</span>
+            </div>
+        `;
+        document.body.appendChild(confirmationMessage);
+        
+        // Aplicar traducciones al nuevo elemento
+        window.i18n.applyTranslations(confirmationMessage);
+        
+        setTimeout(() => {
+            confirmationMessage.style.opacity = '0';
+            setTimeout(() => confirmationMessage.remove(), 300);
+        }, 3000);
+    });
+
+    // Manejar el rechazo de términos inicial
+    document.getElementById('declineInitialTerms').addEventListener('click', function() {
+        // Mostrar mensaje de error
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'terms-error';
+        errorMessage.innerHTML = `
+            <div class="terms-error-content">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#e53e3e">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <span data-i18n="notifications.terms_rejected">Debes aceptar los términos y condiciones para continuar</span>
+            </div>
+        `;
+        document.body.appendChild(errorMessage);
+        
+        // Aplicar traducciones al nuevo elemento
+        window.i18n.applyTranslations(errorMessage);
+        
+        setTimeout(() => {
+            errorMessage.style.opacity = '0';
+            setTimeout(() => errorMessage.remove(), 300);
+        }, 3000);
+    });
     
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');

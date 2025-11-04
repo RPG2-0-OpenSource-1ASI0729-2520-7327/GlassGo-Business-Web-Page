@@ -14,6 +14,10 @@ class I18n {
         this.inlineTranslations = {
             'es': {
                 "meta": { "title": "GlassGo - Software para transporte de vidrio", "language": "es" },
+                "notifications": {
+                    "terms_accepted": "Términos y condiciones aceptados",
+                    "terms_rejected": "Debes aceptar los términos y condiciones para continuar"
+                },
                 "navigation": { "home": "Inicio", "about": "Nosotros", "benefits": "Beneficios", "testimonials": "Testimonios", "faq": "Preguntas", "tutorials": "Tutoriales", "contact": "Contacto", "login": "Iniciar sesión", "register": "Registrarse" },
                 "hero": { "title": "Software diseñado para trazabilidad y<br>prevención de pérdidas en transporte de vidrio", "subtitle": "De la optimización de rutas a la detección de golpes, todo en una sola plataforma", "btn_pricing": "Ver planes y precios", "btn_demo": "Obtener una demostración →" },
                 "about": { "title": "Nosotros", "subtitle": "Somos RPG, una plataforma tecnológica que transforma el transporte de licores en envases de vidrio con trazabilidad en tiempo real, optimización de rutas y sensores inteligentes para entregas seguras y eficientes", "cards": { "help": { "title": "Como ayudamos", "description": "Reducimos pérdidas, optimizamos rutas y garantizamos transparencia en cada envío con tecnología accesible que asegura entregas seguras y eficientes." }, "value": { "title": "Propuesta de valor", "description": "Ofrecemos una solución única que une trazabilidad, prevención de roturas y accesibilidad, para que cada botella llegue segura a su destino y tu negocio gane en eficiencia y confianza." }, "mission": { "title": "Misión y visión", "description": "Revolucionamos el transporte de vidrio con tecnología accesible, segura y eficiente, creando un nuevo estándar sin roturas y con total transparencia." } } },
@@ -27,6 +31,10 @@ class I18n {
             },
             'en': {
                 "meta": { "title": "GlassGo - Glass Transport Software", "language": "en" },
+                "notifications": {
+                    "terms_accepted": "Terms and conditions accepted",
+                    "terms_rejected": "You must accept the terms and conditions to continue"
+                },
                 "navigation": { "home": "Home", "about": "About Us", "benefits": "Benefits", "testimonials": "Testimonials", "faq": "FAQ", "tutorials": "Tutorials", "contact": "Contact", "login": "Log In", "register": "Sign Up" },
                 "hero": { "title": "Software designed for traceability and<br>loss prevention in glass transportation", "subtitle": "From route optimization to impact detection, everything in one platform", "btn_pricing": "View plans and pricing", "btn_demo": "Get a demo →" },
                 "about": { "title": "About Us", "subtitle": "We are RPG, a technological platform that transforms the transportation of liquors in glass containers with real-time traceability, route optimization and smart sensors for safe and efficient deliveries", "cards": { "help": { "title": "How We Help", "description": "We reduce losses, optimize routes and guarantee transparency in every shipment with accessible technology that ensures safe and efficient deliveries." }, "value": { "title": "Value Proposition", "description": "We offer a unique solution that combines traceability, breakage prevention and accessibility, so that every bottle arrives safely at its destination and your business gains efficiency and confidence." }, "mission": { "title": "Mission and Vision", "description": "We revolutionize glass transportation with accessible, safe and efficient technology, creating a new standard without breakage and with total transparency." } } },
