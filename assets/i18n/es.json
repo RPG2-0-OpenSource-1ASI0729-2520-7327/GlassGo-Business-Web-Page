@@ -196,6 +196,11 @@
     "description": "Estas son las características que diferencian nuestra solución: tecnología accesible, enfocada en tu negocio y lista para impulsar tu crecimiento.",
     "social_title": "Redes Sociales",
     "services_title": "Servicios",
+    "legal_title": "Información Legal",
+    "legal": {
+      "contact": "Contacto",
+      "terms": "Términos y Condiciones"
+    },
     "services": {
       "about": "Nosotros",
       "benefits": "Beneficios",

@@ -196,6 +196,11 @@
     "description": "These are the features that set our solution apart: accessible technology, focused on your business and ready to drive your growth.",
     "social_title": "Social Media",
     "services_title": "Services",
+    "legal_title": "Legal Information",
+    "legal": {
+      "contact": "Contact",
+      "terms": "Terms and Conditions"
+    }, 
     "services": {
       "about": "About Us",
       "benefits": "Benefits",
