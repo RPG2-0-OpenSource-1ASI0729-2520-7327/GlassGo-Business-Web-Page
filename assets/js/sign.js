@@ -80,7 +80,8 @@
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const userType = document.querySelector('input[name="userType"]:checked').value;
-        const rememberMe = document.getElementById('rememberMe').checked;
+        const rememberMeElement = document.getElementById('rememberMe');
+        const rememberMe = rememberMeElement ? rememberMeElement.checked : false;
 
         // Validation
         if (!username || !password) {
@@ -139,7 +140,8 @@
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const userType = document.querySelector('input[name="userType"]:checked').value;
-        const rememberMe = document.getElementById('rememberMe').checked;
+        const rememberMeElement = document.getElementById('rememberMe');
+        const rememberMe = rememberMeElement ? rememberMeElement.checked : false;
 
         // Validation
         if (!username || !email || !password) {
