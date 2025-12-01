@@ -110,9 +110,21 @@
             submitButton.textContent = originalText;
             submitButton.disabled = false;
 
-            // Redirect to main page after successful login
+            // Save user info
+            localStorage.setItem('glassgo_username', username);
+            localStorage.setItem('glassgo_usertype', userType);
+
+            // Redirect based on user type
             setTimeout(() => {
-                window.location.href = 'index.html';
+                if (userType === 'business') {
+                    window.location.href = 'dueno-negocio/home.html';
+                } else if (userType === 'transport') {
+                    window.location.href = 'index.html'; // TODO: Create transport dashboard
+                } else if (userType === 'distributor') {
+                    window.location.href = 'index.html'; // TODO: Create distributor dashboard
+                } else {
+                    window.location.href = 'index.html';
+                }
             }, 1500);
         }, 1000);
     }
