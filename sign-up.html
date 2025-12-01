@@ -1,4 +1,10 @@
 ﻿<!DOCTYPE html>
+<!--
+    GlassGo - Sign Up Page
+    Description: New user registration page
+    Features: Registration form, user type selection, social auth options
+    Resources: i18n language support, user registration workflow
+-->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +14,7 @@
     <link rel="stylesheet" href="assets/styles/sign.css">
 </head>
 <body>
-    <!-- Back to Home Button -->
+    <!-- Navigation: Return to homepage button -->
     <a href="index.html" class="back-to-home" aria-label="Back to home">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -16,13 +22,24 @@
     </a>
 
 
+    <!--
+        Authentication Container
+        Layout: Split screen - Registration Form (left) and Branding (right)
+     -->
     <div class="auth-container">
-        <!-- Left Side - Form -->
+        <!-- Left Panel: Registration Form -->
         <div class="auth-left">
             <div class="auth-form-wrapper">
                 <h1 class="auth-title" data-i18n="auth.signup.heading">Sign up</h1>
 
+                <!--
+                    Sign Up Form
+                    Fields: username, email, password, user type selection
+                    Features: Social authentication options (Google, Facebook, Apple)
+                    Actions: Submit registration, redirect to sign in
+                -->
                 <form class="auth-form" id="signupForm">
+                    <!-- Username input field -->
                     <div class="form-group">
                         <input
                             type="text"
@@ -64,6 +81,11 @@
                         </div>
                     </div>
 
+                    <!--
+                        User Type Selector
+                        Options: Business owners, Distributor, Transport companies
+                        Resource: Selected type stored for account setup
+                    -->
                     <div class="form-options">
                         <div class="user-type-selector">
                             <label class="radio-label">
@@ -122,7 +144,12 @@
         </div>
     </div>
 
-    <!-- Success Modal -->
+    <!--
+        Success Modal
+        Purpose: Display successful registration confirmation
+        Features: Welcome message, branding, continue action
+        Resources: Success animation, welcome image
+    -->
     <div class="modal" id="successModal">
         <div class="modal-content success-modal">
             <div class="success-icon">
